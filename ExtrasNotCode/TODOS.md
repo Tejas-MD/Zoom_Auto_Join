@@ -10,4 +10,4 @@
 
 #Wait for user clicking + and turn off video and Paste ID 
 
-#Probably MQTT with https://pypi.org/project/paho-mqtt/ and remotely send a command with teacher inital to trigger and join class.  
+#Probably MQTT with https://pypi.org/project/paho-mqtt/ and remotely send a command with teacher inital to trigger and join class.  OR BETTER JUST SCHEDULE IT BEFORE!!
