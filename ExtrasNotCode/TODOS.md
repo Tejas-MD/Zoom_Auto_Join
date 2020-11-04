@@ -1,6 +1,6 @@
 #TODOS: 
 
-#Clean Code so changes are easy to make
+#Clean Code so changes are easy to make-done
 
 #Auto Open Zoom after copying to clipboard 
 
