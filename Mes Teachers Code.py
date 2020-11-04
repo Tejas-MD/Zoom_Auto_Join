@@ -1,5 +1,6 @@
 from meetCodeGiverF import meetCodeGiver
 import pyperclip 
+import subprocess
 
 
 
@@ -13,5 +14,6 @@ outputCode = meetCodeGiver(x)
 
 print (meetCodeGiver(x))    #OUTPUT 
 pyperclip.copy(outputCode)
-print("Code Copied to Clipboard, you're welcome :-)")
+print("Code Copied to Clipboard, Opening Zoom, you're welcome :-)")
+subprocess.Popen("C:\\Users\\home\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
 #All the TODOS, any additional features, will have to be coded here. 
