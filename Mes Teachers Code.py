@@ -3,7 +3,6 @@ import pyperclip
 import subprocess
 
 
-
 x = input('Enter the Initial of the Teacher:  ')  #INPUT
 x= x.upper()
 
