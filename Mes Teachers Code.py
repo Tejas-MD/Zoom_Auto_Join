@@ -21,4 +21,6 @@ while(True):
     time.sleep(7)
     keyboard.write(str(outputCode))  #Keyboard can only iterate strings!
     print("Pasting the Code")
+    time.sleep(7)
+    keyboard.write("mesmpl")
     #All the TODOS, any additional features, will have to be coded here. 
