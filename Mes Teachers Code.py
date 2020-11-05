@@ -1,24 +1,29 @@
-from meetCodeGiverF import meetCodeGiver
-import pyperclip 
-import subprocess
-import keyboard
-import time
+#Proudly mine #Tejas-MD
 
-while(True):
-    x = input('Enter the Initial of the Teacher:  ')  #INPUT
-    x= x.upper()
+from firstTimeRun import runFirstTimeStuff
+from meetCodeSwitcher import meetCodeGiver
+from CommandHandler import commandHandler
+import globalVars
 
+runFirstTimeStuff()  #One time, accepts 5 teachers initals and stores in 5 vars: x1,x2,x3,x4,x5
 
-    print("Finding the Meeting Code, Just a Second...") #PROCESSING
-    outputCode = meetCodeGiver(x)
+while(True): #TODO: Wrongly looping, urgent fix needed! 
 
+    cmd=input('Waiting for your Orders, use --help for list of commands')
+    #TODO: Add commands list and teachers stored for this execution 
+   
+    if cmd=="--help":
+        print("*Use --newT for reading teachers of the day ")
+        print("*Use --listT for listing the number,order and Initials of already input teachers")
+        print("*Enter a number btw 1-5 to join the particular class!") 
 
-    print (meetCodeGiver(x))    #OUTPUT 
-    pyperclip.copy(outputCode)
-    
-    print("Code Copied to Clipboard, Opening Zoom, you're welcome :-)")
-    subprocess.Popen("C:\\Users\\home\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
-    time.sleep(7)
-    keyboard.write(str(outputCode))  #Keyboard can only iterate strings!
-    print("Pasting the Code")
-    #All the TODOS, any additional features, will have to be coded here. 
+    elif cmd=="--listT":
+        print(globalVars.x1,globalVars.x2,globalVars.x3,globalVars.x4,globalVars.x5) #TODO: Add Spaces #Cause this was causing issues in the command handler
+
+    elif cmd=="--newT": 
+        runFirstTimeStuff() #Cause this was causing issues in the command handler
+
+    else:
+        commandHandler(cmd) #TODO: NOT WORKING, URGENT FIX NEEDED.   # So this is like the base station. It intelligently divertes you to the right function.
+        break
+        # cmd="null"

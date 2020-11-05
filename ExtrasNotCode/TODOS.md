@@ -1,6 +1,6 @@
 #TODOS: 
 
-#Accept all teachers name at the start of the day and give output as req
+#Accept all teachers name at the start of the day and give output as req - Done with insane code refactoring 
 
 #Add a while loop so that the exe does not close until I want it to: Done 
 
