@@ -4,6 +4,7 @@ from meetCodeSwitcher import meetCodeGiver
 def coreFunc(initalsPlease):
     #Everyrhing down here is the core func. TODO: to be wrapped and kept somewhere and used if user command is a num btw 1-5(TeacherNumberCode.py)
     print()
+    print('Teacher to Join: '+ initalsPlease)
     print("Finding the Meeting Code, Just a Second...")  # PROCESSING
     outputCode = meetCodeGiver(initalsPlease)
 

@@ -44,7 +44,3 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
            print("I Gave you so many commands to use but you have the audacity to enter the one I don't know about!")
            print() 
 
-
-#TODO:
-# Add Spaces in terminal Prints
-# Add confirm which teacher it understood in coreFunc. 
