@@ -4,7 +4,7 @@ def meetCodeGiver(argument):    #PROCESSING
     switcher = { 
         "SV": 7931380267, 
         "JP": 7644991204, 
-        "STP": 9257726878, 
+        "STP": 9257726874, 
         "SNK": 4302909682, 
         "AH":  4691762381, 
         "DCK": 5239834372, 
