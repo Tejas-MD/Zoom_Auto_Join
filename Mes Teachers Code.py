@@ -8,18 +8,24 @@ from coreFunc import coreFunc
 runFirstTimeStuff()  #One time, accepts 5 teachers initals and stores in 5 vars: x1,x2,x3,x4,x5
 
 while(True): #TODO: Wrongly looping, urgent fix needed! 
-    cmd=input('Waiting for your Orders, use --help for list of commands')
+    print()
+    cmd=input('Waiting for your Orders, use -h for list of commands')
+    print()
     #TODO: Add commands list and teachers stored for this execution 
    
     if cmd=="-h":
+        print()
         print("*Use --nT for reading teachers of the day ")
         print("*Use --lT for listing the number,order and Initials of already input teachers")
         print("*Enter a number btw 1-5 to join the particular class!") 
+        print()
 
-    elif cmd=="-lT":
+    elif cmd=="-lt":
+        print()
         print(globalVars.x1,globalVars.x2,globalVars.x3,globalVars.x4,globalVars.x5) #TODO: Add Spaces #Cause this was causing issues in the command handler
+        print()
 
-    elif cmd=="-nT": 
+    elif cmd=="-nt": 
         runFirstTimeStuff() #Cause this was causing issues in the command handler
 
     else:
@@ -34,9 +40,9 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
        elif cmd=='5':
             coreFunc(globalVars.x5)
        else:
-           print("")
+           print()
            print("I Gave you so many commands to use but you have the audacity to enter the one I don't know about!")
-           print("") 
+           print() 
 
 
 #TODO:

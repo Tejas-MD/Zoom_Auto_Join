@@ -19,4 +19,4 @@ def runFirstTimeStuff():
     globalVars.x5 = globalVars.x5.upper()
 
     print('Great! I goddit. Just use numbers from now on in the day!')
-    print('Also, If you forget the order, just say --list and I will help!')
+    print('Also, If you forget the order, just say -lt and I will help!')
