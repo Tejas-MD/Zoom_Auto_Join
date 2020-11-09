@@ -9,6 +9,10 @@ def coreFunc(initalsPlease):
     outputCode = meetCodeGiver(initalsPlease)
 
     print(meetCodeGiver(initalsPlease))  # OUTPUT
+    
+    if outputCode=="Didn't find a match. Check the Inital Again Maybe?":
+        return
+
     pyperclip.copy(outputCode)
 
     print("Code Copied to Clipboard, Opening Zoom, you're welcome :-)")
@@ -19,5 +23,10 @@ def coreFunc(initalsPlease):
     time.sleep(5)
     keyboard.write("mesmpl")
     print("There you go, the password!")
+    cntd = input('Do you want to Rejoin? y/n')
+    if cntd=='y':
+        coreFunc(initalsPlease)
+    else:
+        pass
 
     #All the TODOS, any additional features, will have to be coded here.

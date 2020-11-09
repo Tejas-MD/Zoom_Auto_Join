@@ -15,8 +15,8 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
    
     if cmd=="-h":
         print()
-        print("*Use --nT for reading teachers of the day ")
-        print("*Use --lT for listing the number,order and Initials of already input teachers")
+        print("*Use -nt for reading teachers of the day ")
+        print("*Use -lt for listing the number,order and Initials of already input teachers")
         print("*Enter a number btw 1-5 to join the particular class!") 
         print()
 
