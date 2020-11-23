@@ -30,16 +30,16 @@ def coreFunc(initalsPlease):
     # Type the meeting ID
     keyboard.write(str(outputCode))  # Keyboard can only iterate strings!
     print("Typing the Code")
-    pyautogui.moveTo(527,457) #Turn off video button
-    pyautogui.click()
+    # pyautogui.moveTo(527,457) #Turn off video button
+    # pyautogui.click() #Not required cause there's a zoom setting.
     pyautogui.moveTo(707,498) #Join Button
     pyautogui.click()
     time.sleep(5)
     
     keyboard.write("mesmpl")
     print("There you go, the password!")
-    pyautogui.moveTo(691,498) #Join Meeting Button after entering password
-    pyautogui.click()
+    # pyautogui.moveTo(691,498) #Join Meeting Button after entering password
+    # pyautogui.click() #Not Req cause it occurs at same coordinates
     cntd = input('Do you want to Rejoin? y/n')
     if cntd=='y':
         coreFunc(initalsPlease)

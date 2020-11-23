@@ -18,5 +18,8 @@ def runFirstTimeStuff():
     globalVars.x5 = input('5th teacher: ')  # INPUT
     globalVars.x5 = globalVars.x5.upper()
 
+    globalVars.x6 = input('6th teacher: ')  # INPUT
+    globalVars.x6 = globalVars.x6.upper()
+
     print('Great! I goddit. Just use numbers from now on in the day!')
     print('Also, If you forget the order, just say -lt and I will help!')

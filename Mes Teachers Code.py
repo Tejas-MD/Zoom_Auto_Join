@@ -19,12 +19,12 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
         print()
         print("*Use -nt for reading teachers of the day ")
         print("*Use -lt for listing the number,order and Initials of already input teachers")
-        print("*Enter a number btw 1-5 to join the particular class!") 
+        print("*Enter a number btw 1-6 to join the particular class!") 
         print()
 
     elif cmd=="-lt":
         print()
-        print(globalVars.x1,globalVars.x2,globalVars.x3,globalVars.x4,globalVars.x5) #TODO: Add Spaces #Cause this was causing issues in the command handler
+        print(globalVars.x1,globalVars.x2,globalVars.x3,globalVars.x4,globalVars.x5,globalVars.x6) #TODO: Add Spaces #Cause this was causing issues in the command handler
         print()
 
     elif cmd=="-nt": 
@@ -45,6 +45,9 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
             recommendedNumberToJoin=recommendedNumberToJoin+1
        elif cmd=='5':
             coreFunc(globalVars.x5)
+            recommendedNumberToJoin=recommendedNumberToJoin+1
+       elif cmd=='6':
+            coreFunc(globalVars.x6)
             recommendedNumberToJoin=recommendedNumberToJoin+1
        else:
            print()
