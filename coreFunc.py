@@ -17,28 +17,29 @@ def coreFunc(initalsPlease):
 
     #Open Zoom
     print("Code Copied to Clipboard, Opening Zoom, you're welcome :-)")
-    subprocess.Popen("C:\\Users\\home\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
+    openZoom = subprocess.Popen("C:\\Users\\home\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
 
     #Wait until it opens 
-    time.sleep(10)
+    time.sleep(14)
 
-    #Type ID and click Join
-    join_btn = pyautogui.locateCenterOnScreen('join_button.png')
-    pyautogui.moveTo(join_btn)
+    #Click on the Join(+) Icon!
+    pyautogui.moveTo(590,283)
     pyautogui.click()
 
-
+    time.sleep(2)
     # Type the meeting ID
-    meeting_id_btn =  pyautogui.locateCenterOnScreen('meeting_id_button.png')
-    pyautogui.moveTo(meeting_id_btn)
-    pyautogui.click()
     keyboard.write(str(outputCode))  # Keyboard can only iterate strings!
     print("Typing the Code")
+    pyautogui.moveTo(527,457) #Turn off video button
+    pyautogui.click()
+    pyautogui.moveTo(707,498) #Join Button
+    pyautogui.click()
     time.sleep(5)
-
     
     keyboard.write("mesmpl")
     print("There you go, the password!")
+    pyautogui.moveTo(691,498) #Join Meeting Button after entering password
+    pyautogui.click()
     cntd = input('Do you want to Rejoin? y/n')
     if cntd=='y':
         coreFunc(initalsPlease)
