@@ -38,8 +38,8 @@ def coreFunc(initalsPlease):
     
     keyboard.write("mesmpl")
     print("There you go, the password!")
-    # pyautogui.moveTo(691,498) #Join Meeting Button after entering password
-    # pyautogui.click() #Not Req cause it occurs at same coordinates
+    # pyautogui.moveTo(691,498) #Join Meeting Button after entering password #Not Req cause it occurs at same coordinates
+    pyautogui.click() 
     cntd = input('Do you want to Rejoin? y/n')
     if cntd=='y':
         coreFunc(initalsPlease)
