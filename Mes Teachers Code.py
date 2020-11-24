@@ -4,6 +4,7 @@ from firstTimeRun import runFirstTimeStuff
 from meetCodeSwitcher import meetCodeGiver
 import globalVars
 from coreFunc import coreFunc
+from autoTimeMode import autoTimeModee as autoTimeMode
 
 runFirstTimeStuff()  #One time, accepts 5 teachers initals and stores in 5 vars: x1,x2,x3,x4,x5
 
@@ -29,6 +30,9 @@ while(True): #TODO: Wrongly looping, urgent fix needed!
 
     elif cmd=="-nt": 
         runFirstTimeStuff() #Cause this was causing issues in the command handler
+
+    elif cmd=='auto':
+        autoTimeMode()
 
     else:
        if cmd=='1': #TODO: NOT WORKING, URGENT FIX NEEDED.   # So this is like the base station. It intelligently divertes you to the right function.
