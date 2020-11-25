@@ -32,6 +32,7 @@ def coreFunc(initalsPlease):
     print("Typing the Code")
     # pyautogui.moveTo(527,457) #Turn off video button
     # pyautogui.click() #Not required cause there's a zoom setting.
+    time.sleep(1)
     pyautogui.moveTo(707,498) #Join Button
     pyautogui.click()
     time.sleep(5)
