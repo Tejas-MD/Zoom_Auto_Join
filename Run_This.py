@@ -14,7 +14,7 @@ def openZoomfromtxt():    #Using the Zoom Path TXT
     zoomPathFile= open("Text_Memory/ZoomPath.txt","r")
     subprocess.Popen(zoomPathFile.read())
     zoomPathFile.close()
-    print('Please observe if ZOOM opens in 15 sec')
+    # print('Please observe if ZOOM opens in 15 sec')
     time.sleep(14)
 
 def accessCoods(FileName):
