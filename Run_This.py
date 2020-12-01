@@ -1,3 +1,6 @@
+
+#DISCLAIMER: THIS SOFTWARE IS DISTRIBUTED AS IS AND THE OWNER IS NOT RESPONSIBLE FOR ANY ISSUES ARISING FROM THE MISUSE/VIOLATIONS OF THE SAME. PLEASE UNDERSTAND THAT YOU ARE COMPLETELY RESPONSIBLE FOR WHAT YOUR ACTIONS RESULT IN WHILE USING THIS SOFTWARE
+
 import subprocess,time,pyperclip,keyboard,pyautogui
 import pandas as pd
 from datetime import datetime
@@ -8,9 +11,10 @@ df = pd.read_csv('meetingschedule.csv')
 df_new = pd.DataFrame()
 
 def openZoomfromtxt():    #Using the Zoom Path TXT
-    zoomPathFile= open("ZoomPath.txt","r")
+    zoomPathFile= open("Text_Memory/ZoomPath.txt","r")
     subprocess.Popen(zoomPathFile.read())
     zoomPathFile.close()
+    print('Please observe if ZOOM opens in 15 sec')
     time.sleep(14)
 
 def accessCoods(FileName):
@@ -20,9 +24,12 @@ def accessCoods(FileName):
     return plusButtonX
 
 
-def coreCodeFunc():
-    
-   #Check the current system time
+print("DISCLAIMER: THIS SOFTWARE IS DISTRIBUTED AS IS AND THE OWNER IS NOT RESPONSIBLE FOR ANY ISSUES ARISING FROM THE MISUSE/VIOLATIONS OF THE SAME. PLEASE UNDERSTAND THAT YOU ARE COMPLETELY RESPONSIBLE FOR WHAT YOUR ACTIONS RESULT IN WHILE USING THIS SOFTWARE \n")
+
+print("Please keep my memory(excel sheet) updated, I will take care of the classes!")
+
+while(True): 
+    #Check the current system time
     timestr = datetime.now().strftime("%H:%M")
     #Check if the current time is mentioned in the Dataframe
     if timestr in df.Time.values:
@@ -37,8 +44,8 @@ def coreCodeFunc():
 
         #Click on the Join(+) Icon!
         print('Trying the + Button!')
-        plusButtonX=accessCoods('plusXCoordinate.txt')
-        plusButtonY=accessCoods('plusYCoordinate.txt')
+        plusButtonX=accessCoods('Text_Memory/plusXCoordinate.txt')
+        plusButtonY=accessCoods('Text_Memory/plusYCoordinate.txt')
 
         pyautogui.moveTo(plusButtonX,plusButtonY)
         pyautogui.click()
@@ -54,8 +61,8 @@ def coreCodeFunc():
 
         #Clicking Join 
         print('Lets Go!')
-        joinButtonX=accessCoods('joinXCoordinate.txt')  
-        joinButtonY=accessCoods('joinYCoordinate.txt')
+        joinButtonX=accessCoods('Text_Memory/joinXCoordinate.txt')  
+        joinButtonY=accessCoods('Text_Memory/joinYCoordinate.txt')
         pyautogui.moveTo(joinButtonX,joinButtonY)
         pyautogui.click()
         
@@ -65,12 +72,4 @@ def coreCodeFunc():
         print("There you go, the password!")
         pyautogui.click()
         time.sleep(10) #So that it can only have the capacity to run once in that minute.
-   
- #Too much iteration to use this!   
-    # cntd = input('Do you want to Rejoin? y/n')
-    # if cntd=='y':
-    #     coreFunc(initalsPlease)
-    # else:
-    #     pass
 
-    #All the TODOS, any additional features, will have to be coded here.

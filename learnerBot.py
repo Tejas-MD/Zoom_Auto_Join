@@ -11,12 +11,12 @@ def zoomPathCalib():
     # Zoom App Open Calibration
     zoomPath = input(
         'Please Enter the path to your zoom.exe. NOTE: Please use // insted of / in the path! ')
-    zoomPathFile = open("ZoomPath.txt", "w+")
+    zoomPathFile = open("Text_Memory/ZoomPath.txt", "w+")
     zoomPathFile.write(zoomPath)
     zoomPathFile.close()
 
 def openZoomfromtxt():    #Using the Zoom Path TXT
-    zoomPathFile= open("ZoomPath.txt","r")
+    zoomPathFile= open("Text_Memory/ZoomPath.txt","r")
     subprocess.Popen(zoomPathFile.read())
     zoomPathFile.close()
     print('Please observe if ZOOM opens in 15 sec')
@@ -30,7 +30,7 @@ def accessCoods(FileName):
     return plusButtonX
     
 
-    # plusYCoordinateFile= open("plusYCoordinate.txt","r")
+    # plusYCoordinateFile= open("Text_Memory/plusYCoordinate.txt","r")
     # plusButtonY = int(plusYCoordinateFile.read())
     # plusYCoordinateFile.close()
 
@@ -63,10 +63,10 @@ print('Please place your mouse at the centre of the Join(Plus) icon for the 15 s
 time.sleep(15) #Waiting for user to place mouse on Join(+)
 
 plusx,plusy=pyautogui.position()
-plusXCoordinateFile = open("plusXCoordinate.txt", "w+")
+plusXCoordinateFile = open("Text_Memory/plusXCoordinate.txt", "w+")
 plusXCoordinateFile.write(str(plusx))
 plusXCoordinateFile.close()
-plusYCoordinateFile = open("plusYCoordinate.txt", "w+")
+plusYCoordinateFile = open("Text_Memory/plusYCoordinate.txt", "w+")
 plusYCoordinateFile.write(str(plusy))
 plusYCoordinateFile.close()
 
@@ -76,8 +76,8 @@ openZoomfromtxt()
 print('Opened Zoom, YAY!')
 
 print('Trying the + Button!')
-plusButtonX=accessCoods('plusXCoordinate.txt')
-plusButtonY=accessCoods('plusYCoordinate.txt')
+plusButtonX=accessCoods('Text_Memory/plusXCoordinate.txt')
+plusButtonY=accessCoods('Text_Memory/plusYCoordinate.txt')
 
 pyautogui.moveTo(plusButtonX,plusButtonY)
 pyautogui.click()
@@ -92,10 +92,10 @@ print('Please point your mouse at the join button that you gotta press after ent
 time.sleep(15)
 
 joinX,joinY=pyautogui.position()
-joinXCoordinateFile = open("joinXCoordinate.txt", "w+")
+joinXCoordinateFile = open("Text_Memory/joinXCoordinate.txt", "w+")
 joinXCoordinateFile.write(str(joinX))
 joinXCoordinateFile.close()
-joinYCoordinateFile = open("joinYCoordinate.txt", "w+")
+joinYCoordinateFile = open("Text_Memory/joinYCoordinate.txt", "w+")
 joinYCoordinateFile.write(str(joinY))
 joinYCoordinateFile.close()
 
@@ -109,8 +109,8 @@ print('Opening Zoom')
 openZoomfromtxt()
 
 print('Clicking +')
-plusButtonX=accessCoods('plusXCoordinate.txt')
-plusButtonY=accessCoods('plusYCoordinate.txt')
+plusButtonX=accessCoods('Text_Memory/plusXCoordinate.txt')
+plusButtonY=accessCoods('Text_Memory/plusYCoordinate.txt')
 pyautogui.moveTo(plusButtonX,plusButtonY)
 pyautogui.click()
 
@@ -118,8 +118,8 @@ time.sleep(6)
 
 #Will Open, read and close file
 print('Clicking Join')
-joinButtonX=accessCoods('joinXCoordinate.txt')  
-joinButtonY=accessCoods('joinYCoordinate.txt')
+joinButtonX=accessCoods('Text_Memory/joinXCoordinate.txt')  
+joinButtonY=accessCoods('Text_Memory/joinYCoordinate.txt')
 pyautogui.moveTo(joinButtonX,joinButtonY)
 pyautogui.click()
 
