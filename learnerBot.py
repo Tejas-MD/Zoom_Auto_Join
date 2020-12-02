@@ -7,10 +7,10 @@ import os as os
 
 
 print('Hey, This must be your first time here! I will learn to join your classes if you show me how, only once.')
-if(os._exists("Text_Memory")):
-    pass
-else:
-    os.makedirs("Text_Memory")
+# if(os._exists("Text_Memory")):
+#     pass
+# else:
+#     os.makedirs("Text_Memory")
 
 
 time.sleep(1)
