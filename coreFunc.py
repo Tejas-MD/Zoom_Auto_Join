@@ -61,7 +61,7 @@ def coreFunc(initalsPlease):
     pyautogui.moveTo(joinButtonX,joinButtonY)
     pyautogui.click()
     
-    time.sleep(2)    #Zoom is obviously slower than my code
+    time.sleep(5)    #Zoom is obviously slower than my code
 
     keyboard.write("mesmpl")
     print("There you go, the password!")
