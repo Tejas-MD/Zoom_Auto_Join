@@ -41,6 +41,10 @@ while(True):
         #Wait until it opens 
         time.sleep(14)
 
+        # Close the "free trial ended thing"
+        pyautogui.moveTo(x= 683, y = 468)
+        pyautogui.click()
+        time.sleep(2)
 
         #Click on the Join(+) Icon!
         print('Trying the + Button!')
