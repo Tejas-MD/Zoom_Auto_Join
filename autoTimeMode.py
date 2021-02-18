@@ -25,11 +25,11 @@ def autoTimeModee():
         #     else:
         #         pass
         timeClassComparer(10,2,0,globalVars.x1)
-        timeClassComparer(11,2,1,globalVars.x2)
-        timeClassComparer(12,2,2,globalVars.x3)
-        timeClassComparer(13,17,3,globalVars.x4)
-        timeClassComparer(14,17,4,globalVars.x5)
-        timeClassComparer(15,17,5,globalVars.x6)
+        timeClassComparer(10,57,1,globalVars.x2)
+        timeClassComparer(11,52,2,globalVars.x3)
+        timeClassComparer(13,12,3,globalVars.x4)
+        timeClassComparer(14,7,4,globalVars.x5)
+        timeClassComparer(15,2,5,globalVars.x6)
         
         # #test
         # timeClassComparer(13,21,1,globalVars.x2) #WORKING!
