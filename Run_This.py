@@ -57,7 +57,7 @@ while(True):
 
 
         # Type the meeting ID
-        keyboard.write(df_new.iloc[0,1])  # Keyboard can only iterate strings!
+        keyboard.write(str(df_new.iloc[0,1]))  # Keyboard can only iterate strings!
         print("Typing the Code")
         # pyautogui.moveTo(527,457) #Turn off video button
         # pyautogui.click() #Not required cause there's a zoom setting.
@@ -72,7 +72,7 @@ while(True):
         
         time.sleep(7)
 
-        keyboard.write(str(int(df_new.iloc[0,2])))
+        keyboard.write(str(df_new.iloc[0,2]))
         print("There you go, the password!")
         pyautogui.click()
         time.sleep(10) #So that it can only have the capacity to run once in that minute.
